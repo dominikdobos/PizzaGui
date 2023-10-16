@@ -1,5 +1,6 @@
 package csomag;
 
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -8,6 +9,9 @@ public class Pizzeria extends javax.swing.JFrame {
 
     public Pizzeria() {
         initComponents();
+        
+        Color col = new Color(57,62,65);
+        getContentPane().setBackground(col);
     }
 
     @SuppressWarnings("unchecked")
@@ -81,9 +85,11 @@ public class Pizzeria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pizzéria");
+        setBackground(new java.awt.Color(57, 62, 65));
         setResizable(false);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Méret"));
+        jPanel1.setBackground(new java.awt.Color(233, 79, 55));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Méret", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
         cmb_meret.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Válassz!", "24", "32", "45" }));
         cmb_meret.setSelectedIndex(0);
@@ -93,8 +99,10 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(246, 247, 235));
         jLabel1.setText("cm");
 
+        jLabel4.setForeground(new java.awt.Color(246, 247, 235));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("100Ft.-/cm");
 
@@ -122,12 +130,14 @@ public class Pizzeria extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Szószok/Alapok"));
+        jPanel2.setBackground(new java.awt.Color(233, 79, 55));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Szószok/Alapok", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
         buttonGroup1.add(rbPar);
+        rbPar.setForeground(new java.awt.Color(246, 247, 235));
         rbPar.setText("Paradicsomos");
         rbPar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +146,7 @@ public class Pizzeria extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(rbNincs);
+        rbNincs.setForeground(new java.awt.Color(246, 247, 235));
         rbNincs.setText("Szósz nélkül");
         rbNincs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +155,7 @@ public class Pizzeria extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(rbTejf);
+        rbTejf.setForeground(new java.awt.Color(246, 247, 235));
         rbTejf.setText("Tejszínes");
         rbTejf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,11 +187,14 @@ public class Pizzeria extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(246, 247, 235));
         jLabel5.setText("Darab :");
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Feltétek"));
+        jPanel3.setBackground(new java.awt.Color(233, 79, 55));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Feltétek", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
+        cb_cheddar.setForeground(new java.awt.Color(246, 247, 235));
         cb_cheddar.setText("Cheddar");
         cb_cheddar.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -187,6 +202,7 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
+        cb_kukorica.setForeground(new java.awt.Color(246, 247, 235));
         cb_kukorica.setText("Kukorica");
         cb_kukorica.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -194,6 +210,7 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
+        cb_sonka.setForeground(new java.awt.Color(246, 247, 235));
         cb_sonka.setText("Sonka");
         cb_sonka.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -201,10 +218,13 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setForeground(new java.awt.Color(246, 247, 235));
         jLabel6.setText("Ára :");
 
+        jLabel8.setForeground(new java.awt.Color(246, 247, 235));
         jLabel8.setText("Ára :");
 
+        jLabel9.setForeground(new java.awt.Color(246, 247, 235));
         jLabel9.setText("Ára :");
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -222,10 +242,13 @@ public class Pizzeria extends javax.swing.JFrame {
         jTextField6.setText("100");
         jTextField6.setEnabled(false);
 
+        jLabel10.setForeground(new java.awt.Color(246, 247, 235));
         jLabel10.setText("Ft.-");
 
+        jLabel12.setForeground(new java.awt.Color(246, 247, 235));
         jLabel12.setText("Ft.-");
 
+        jLabel13.setForeground(new java.awt.Color(246, 247, 235));
         jLabel13.setText("Ft.-");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -287,7 +310,9 @@ public class Pizzeria extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setBackground(new java.awt.Color(246, 247, 235));
+        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(246, 247, 235));
         jLabel14.setText("Fizetendő");
 
         tf_fizetendo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -296,8 +321,9 @@ public class Pizzeria extends javax.swing.JFrame {
         tf_fizetendo.setText("0");
         tf_fizetendo.setEnabled(false);
 
-        btnHozzaadas.setBackground(new java.awt.Color(0, 153, 153));
+        btnHozzaadas.setBackground(new java.awt.Color(242, 122, 125));
         btnHozzaadas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnHozzaadas.setForeground(new java.awt.Color(246, 247, 235));
         btnHozzaadas.setText("Hozzáadás");
         btnHozzaadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,8 +331,9 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
-        btnTorles.setBackground(new java.awt.Color(255, 102, 102));
+        btnTorles.setBackground(new java.awt.Color(146, 20, 12));
         btnTorles.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnTorles.setForeground(new java.awt.Color(246, 247, 235));
         btnTorles.setText("Törlés");
         btnTorles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,8 +348,9 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
-        btnRendeles.setBackground(new java.awt.Color(0, 153, 255));
+        btnRendeles.setBackground(new java.awt.Color(254, 74, 73));
         btnRendeles.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnRendeles.setForeground(new java.awt.Color(246, 247, 235));
         btnRendeles.setText("Rendelés");
         btnRendeles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,7 +358,8 @@ public class Pizzeria extends javax.swing.JFrame {
             }
         });
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Kosár"));
+        jPanel4.setBackground(new java.awt.Color(233, 79, 55));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Kosár", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
         kosar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -374,7 +403,8 @@ public class Pizzeria extends javax.swing.JFrame {
                 .addGap(0, 7, Short.MAX_VALUE))
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Illusztráció"));
+        jPanel5.setBackground(new java.awt.Color(233, 79, 55));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Illusztráció", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -393,7 +423,8 @@ public class Pizzeria extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Megjegyzés"));
+        jPanel6.setBackground(new java.awt.Color(233, 79, 55));
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Megjegyzés", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
         taMegj.setColumns(20);
         taMegj.setRows(5);
@@ -414,9 +445,12 @@ public class Pizzeria extends javax.swing.JFrame {
         );
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(233, 79, 55));
         jLabel7.setText("Dominik Pizzéria");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setBackground(new java.awt.Color(246, 247, 235));
+        jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(246, 247, 235));
         jLabel11.setText("Ft");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -498,7 +532,7 @@ public class Pizzeria extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel1, jPanel2});
@@ -641,9 +675,9 @@ public class Pizzeria extends javax.swing.JFrame {
         }
         String uzenet = "";
         if (taMegj.getText().isEmpty()) {
-            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar;
+            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + "Ft";
         } else {
-            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + "\n\nMegjegyzés:\n" + taMegj.getText();
+            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + "Ft" + "\n\nMegjegyzés:\n" + taMegj.getText();
         }
 
         if (tablazat.getRowCount() > 0) {
