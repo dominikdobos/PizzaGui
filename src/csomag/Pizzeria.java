@@ -41,9 +41,9 @@ public class Pizzeria extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        sonkaAr = new javax.swing.JTextField();
+        kukoricaAr = new javax.swing.JTextField();
+        cheddarAr = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -227,20 +227,20 @@ public class Pizzeria extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(246, 247, 235));
         jLabel9.setText("Ára :");
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("200");
-        jTextField2.setEnabled(false);
+        sonkaAr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        sonkaAr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sonkaAr.setText("200");
+        sonkaAr.setEnabled(false);
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setText("75");
-        jTextField5.setEnabled(false);
+        kukoricaAr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        kukoricaAr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        kukoricaAr.setText("75");
+        kukoricaAr.setEnabled(false);
 
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setText("100");
-        jTextField6.setEnabled(false);
+        cheddarAr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cheddarAr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cheddarAr.setText("100");
+        cheddarAr.setEnabled(false);
 
         jLabel10.setForeground(new java.awt.Color(246, 247, 235));
         jLabel10.setText("Ft.-");
@@ -266,25 +266,25 @@ public class Pizzeria extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cheddarAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(kukoricaAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel12))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sonkaAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField2, jTextField5, jTextField6});
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cheddarAr, kukoricaAr, sonkaAr});
 
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,19 +293,19 @@ public class Pizzeria extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_sonka)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sonkaAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_kukorica)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kukoricaAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_cheddar)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cheddarAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
@@ -642,23 +642,27 @@ public class Pizzeria extends javax.swing.JFrame {
 
     private void btnTorlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTorlesActionPerformed
         // TÖRLÉS GOMB
+        
+        Object[] opciok = {"Igen","Mégse"};
+        int torlesMegerosit = JOptionPane.showOptionDialog(rootPane, "Biztos törlöd a kiválasztott beállításokat?", "Törlés megerősítés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
+        if (torlesMegerosit == 0){
+            cmb_meret.setSelectedIndex(0);
+            cmb_darab.setSelectedIndex(0);
+            tf_fizetendo.setText("0");
+            cb_cheddar.setSelected(false);
+            cb_kukorica.setSelected(false);
+            cb_sonka.setSelected(false);
+            buttonGroup1.clearSelection();
 
-        cmb_meret.setSelectedIndex(0);
-        cmb_darab.setSelectedIndex(0);
-        tf_fizetendo.setText("0");
-        cb_cheddar.setSelected(false);
-        cb_kukorica.setSelected(false);
-        cb_sonka.setSelected(false);
-        buttonGroup1.clearSelection();
+            // Kép törlése
+            ImageIcon icon = new ImageIcon();
+            lbKep.setIcon(icon);
 
-        // Kép törlése
-        ImageIcon icon = new ImageIcon();
-        lbKep.setIcon(icon);
-
-        // Táblázat törlés
-        DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
-        while (tablazat.getRowCount() > 0) {
-            tablazat.removeRow(0);
+            // Táblázat törlés
+            DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
+            while (tablazat.getRowCount() > 0) {
+                tablazat.removeRow(0);
+            }
         }
     }//GEN-LAST:event_btnTorlesActionPerformed
 
@@ -765,6 +769,7 @@ public class Pizzeria extends javax.swing.JFrame {
     private javax.swing.JCheckBox cb_cheddar;
     private javax.swing.JCheckBox cb_kukorica;
     private javax.swing.JCheckBox cb_sonka;
+    private javax.swing.JTextField cheddarAr;
     private javax.swing.JComboBox<String> cmb_darab;
     private javax.swing.JComboBox<String> cmb_meret;
     private javax.swing.JLabel jLabel1;
@@ -792,15 +797,14 @@ public class Pizzeria extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTable kosar;
+    private javax.swing.JTextField kukoricaAr;
     private javax.swing.JLabel lbKep;
     private javax.swing.JRadioButton rbNincs;
     private javax.swing.JRadioButton rbPar;
     private javax.swing.JRadioButton rbTejf;
+    private javax.swing.JTextField sonkaAr;
     private javax.swing.JTextArea taMegj;
     private javax.swing.JTextField tf_fizetendo;
     // End of variables declaration//GEN-END:variables
@@ -809,37 +813,36 @@ public class Pizzeria extends javax.swing.JFrame {
         int fizetendo = 0;
 
         if (cmb_meret.getSelectedIndex() == 1) {
-            fizetendo = fizetendo + 2400;
+            fizetendo += 2400;
             tf_fizetendo.setText(Integer.toString(fizetendo));
         } else if (cmb_meret.getSelectedIndex() == 2) {
-            fizetendo = fizetendo + 3200;
+            fizetendo += 3200;
             tf_fizetendo.setText(Integer.toString(fizetendo));
         } else if (cmb_meret.getSelectedIndex() == 3) {
-            fizetendo = fizetendo + 4500;
+            fizetendo += 4500;
             tf_fizetendo.setText(Integer.toString(fizetendo));
         }
 
         if (cmb_darab.getSelectedIndex() == 0) {
-            fizetendo = fizetendo;
             tf_fizetendo.setText(Integer.toString(fizetendo));
         } else if (cmb_darab.getSelectedIndex() == 1) {
-            fizetendo += fizetendo * 2;
+            fizetendo = fizetendo * 2;
             tf_fizetendo.setText(Integer.toString(fizetendo));
         } else {
-            fizetendo += fizetendo * 3;
+            fizetendo = fizetendo * 3;
             tf_fizetendo.setText(Integer.toString(fizetendo));
         }
 
         if (cb_sonka.isSelected()) {
-            fizetendo = fizetendo + 200;
+            fizetendo = fizetendo + Integer.parseInt(sonkaAr.getText());
             tf_fizetendo.setText(Integer.toString(fizetendo));
         }
         if (cb_kukorica.isSelected()) {
-            fizetendo = fizetendo + 75;
+            fizetendo = fizetendo + Integer.parseInt(kukoricaAr.getText());
             tf_fizetendo.setText(Integer.toString(fizetendo));
         }
         if (cb_cheddar.isSelected()) {
-            fizetendo = fizetendo + 100;
+            fizetendo = fizetendo + Integer.parseInt(cheddarAr.getText());
             tf_fizetendo.setText(Integer.toString(fizetendo));
         }
     }
