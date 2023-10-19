@@ -642,26 +642,37 @@ public class Pizzeria extends javax.swing.JFrame {
 
     private void btnTorlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTorlesActionPerformed
         // TÖRLÉS GOMB
-        
+        DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
         Object[] opciok = {"Igen","Mégse"};
-        int torlesMegerosit = JOptionPane.showOptionDialog(rootPane, "Biztos törlöd a kiválasztott beállításokat?", "Törlés megerősítés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
-        if (torlesMegerosit == 0){
-            cmb_meret.setSelectedIndex(0);
-            cmb_darab.setSelectedIndex(0);
-            tf_fizetendo.setText("0");
-            cb_cheddar.setSelected(false);
-            cb_kukorica.setSelected(false);
-            cb_sonka.setSelected(false);
-            buttonGroup1.clearSelection();
+        int[] kosarIndex;
+        if (kosar.getSelectedRowCount() > 0) {
+            int kivalasztottTorles = JOptionPane.showOptionDialog(rootPane, "Biztos törlöd a kiválasztott pizzát?", "Törlés megerősítés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
+            if (kivalasztottTorles == 0) {
+                kosarIndex = kosar.getSelectedRows();
+                for (int i = 0; kosar.getSelectedRows().length > i; i++) {
+                    tablazat.removeRow(i);
+                }
+            }
+        }
+        else {
+            int torlesMegerosit = JOptionPane.showOptionDialog(rootPane, "Biztos törlöd a kiválasztott beállításokat?", "Törlés megerősítés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
+            if (torlesMegerosit == 0){
+                cmb_meret.setSelectedIndex(0);
+                cmb_darab.setSelectedIndex(0);
+                tf_fizetendo.setText("0");
+                cb_cheddar.setSelected(false);
+                cb_kukorica.setSelected(false);
+                cb_sonka.setSelected(false);
+                buttonGroup1.clearSelection();
 
-            // Kép törlése
-            ImageIcon icon = new ImageIcon();
-            lbKep.setIcon(icon);
+                // Kép törlése
+                ImageIcon icon = new ImageIcon();
+                lbKep.setIcon(icon);
 
-            // Táblázat törlés
-            DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
-            while (tablazat.getRowCount() > 0) {
-                tablazat.removeRow(0);
+                // Táblázat törlés
+                while (tablazat.getRowCount() > 0) {
+                    tablazat.removeRow(0);
+                }
             }
         }
     }//GEN-LAST:event_btnTorlesActionPerformed
