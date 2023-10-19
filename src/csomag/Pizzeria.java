@@ -83,10 +83,15 @@ public class Pizzeria extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Pizzéria");
         setBackground(new java.awt.Color(57, 62, 65));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(233, 79, 55));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Méret", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
@@ -740,6 +745,10 @@ public class Pizzeria extends javax.swing.JFrame {
         kep();
     }//GEN-LAST:event_rbNincsActionPerformed
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        bezar();
+    }//GEN-LAST:event_formWindowClosing
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -960,6 +969,13 @@ public class Pizzeria extends javax.swing.JFrame {
                 lbKep.setIcon(icon);
             }
         }
+    }
 
+    private void bezar() {
+        Object[] opciok = {"Igen","Mégse"};
+        int kilepesMegerosit = JOptionPane.showOptionDialog(rootPane, "Biztos kilépsz a programból?", "Kilépés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
+        if (kilepesMegerosit == 0){
+            System.exit(0);
+        }
     }
 }
