@@ -671,6 +671,7 @@ public class Pizzeria extends javax.swing.JFrame {
         
         // TESZT
         // paraméterezés
+        // komment
         
         DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
         int ar = 0;
