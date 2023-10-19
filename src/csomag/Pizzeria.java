@@ -669,10 +669,6 @@ public class Pizzeria extends javax.swing.JFrame {
     private void btnRendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRendelesActionPerformed
         // RENDELÉS GOMB
         
-        // TESZT
-        // paraméterezés
-        // komment
-        
         DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
         int ar = 0;
 
