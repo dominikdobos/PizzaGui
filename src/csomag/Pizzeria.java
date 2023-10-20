@@ -330,6 +330,7 @@ public class Pizzeria extends javax.swing.JFrame {
         btnHozzaadas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnHozzaadas.setForeground(new java.awt.Color(246, 247, 235));
         btnHozzaadas.setText("Hozzáadás");
+        btnHozzaadas.setToolTipText("Kosárhoz adás");
         btnHozzaadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHozzaadasActionPerformed(evt);
@@ -382,6 +383,7 @@ public class Pizzeria extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        kosar.setToolTipText("(CTRL + Click) kijelölés törlés");
         kosar.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(kosar);
         if (kosar.getColumnModel().getColumnCount() > 0) {
@@ -431,8 +433,13 @@ public class Pizzeria extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(233, 79, 55));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Megjegyzés", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Black", 1, 12), new java.awt.Color(220, 224, 217))); // NOI18N
 
-        taMegj.setColumns(20);
-        taMegj.setRows(5);
+        taMegj.setColumns(3);
+        taMegj.setForeground(new java.awt.Color(57, 62, 65));
+        taMegj.setLineWrap(true);
+        taMegj.setRows(2);
+        taMegj.setTabSize(1);
+        taMegj.setToolTipText("Megjegyzés helye");
+        taMegj.setWrapStyleWord(true);
         jScrollPane1.setViewportView(taMegj);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -452,6 +459,7 @@ public class Pizzeria extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(233, 79, 55));
         jLabel7.setText("Dominik Pizzéria");
+        jLabel7.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
         jLabel11.setBackground(new java.awt.Color(246, 247, 235));
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
@@ -696,9 +704,9 @@ public class Pizzeria extends javax.swing.JFrame {
         }
         String uzenet = "";
         if (taMegj.getText().isEmpty()) {
-            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + "Ft";
+            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + " Ft";
         } else {
-            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + "Ft" + "\n\nMegjegyzés:\n" + taMegj.getText();
+            uzenet = "     Köszönjük a rendelést!\n\nFizetendő: " + ar + " Ft" + "\n\nMegjegyzés:\n" + taMegj.getText();
         }
 
         if (tablazat.getRowCount() > 0) {
