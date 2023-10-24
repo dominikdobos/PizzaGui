@@ -161,7 +161,7 @@ public class Pizzeria extends javax.swing.JFrame {
 
         buttonGroup1.add(rbTejf);
         rbTejf.setForeground(new java.awt.Color(246, 247, 235));
-        rbTejf.setText("Tejszínes");
+        rbTejf.setText("Tejfölös");
         rbTejf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbTejfActionPerformed(evt);
@@ -658,13 +658,24 @@ public class Pizzeria extends javax.swing.JFrame {
         DefaultTableModel tablazat = (DefaultTableModel) kosar.getModel();
         Object[] opciok = {"Igen","Mégse"};
         int[] kosarIndex;
-        if (kosar.getSelectedRowCount() > 0) {
+        if (kosar.getSelectedRowCount() > 1) {
+            int kivalasztottTorlesek = JOptionPane.showOptionDialog(rootPane, "Biztos törlöd a kiválasztott pizzákat?", "Törlés megerősítés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
+            if (kivalasztottTorlesek == 0) {
+                kosarIndex = kosar.getSelectedRows();
+                if (kosar.getSelectedRowCount() > 1) {
+                    int i = 0;
+                    tablazat.removeRow(kosarIndex[i]);
+                    while (kosar.getSelectedRowCount() > 0) {
+                        tablazat.removeRow(kosarIndex[i+1]-1);
+                        i++;
+                    }
+                }
+            }
+        }
+        else if (kosar.getSelectedRowCount() == 1) {
             int kivalasztottTorles = JOptionPane.showOptionDialog(rootPane, "Biztos törlöd a kiválasztott pizzát?", "Törlés megerősítés", 2, 2, null, opciok, EXIT_ON_CLOSE);;
             if (kivalasztottTorles == 0) {
-                kosarIndex = kosar.getSelectedRows();
-                for (int i = 0; kosar.getSelectedRows().length > i; i++) {
-                    tablazat.removeRow(i);
-                }
+                tablazat.removeRow(kosar.getSelectedRow());
             }
         }
         else {
